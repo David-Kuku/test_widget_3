@@ -46,7 +46,7 @@ function App({ domElement }) {
   return (
     <div className="reddit_widget__app">
       <h1 className="reddit_widget__header">
-        Latest posts in <a href={`https://reddit.com/r/${subreddit}`} rel="noopener noreferrer">/r/{subreddit}</a>
+        Latest posts in __hell0__ <a href={`https://reddit.com/r/${subreddit}`} rel="noopener noreferrer">/r/{subreddit}</a>
       </h1>
       <div className="reddit_widget__inner">
         {loading && "Loading..."}
@@ -54,7 +54,7 @@ function App({ domElement }) {
         {!!data.length && data.filter(nonStickiedOnly).map(renderPost)}
       </div>
       <p className="reddit_widget__powered_by">
-        This widget is powered by{" "}
+        This kuku widget is powered by{" "}
         <a
           href="https://javascriptpros.com"
           rel="noopener noreferrer"
