@@ -60,7 +60,7 @@ function App({ domElement }) {
           rel="noopener noreferrer"
           target="_blank"
         >
-          JavaScriptPros.com
+          ReactPros.com
         </a>
       </p>
     </div>
