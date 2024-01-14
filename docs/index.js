@@ -867,70 +867,60 @@ if ("production" === 'production') {
 }
 },{"./cjs/react-dom.production.min.js":"i17t"}],"EQHX":[function(require,module,exports) {
 
-},{}],"lY9v":[function(require,module,exports) {
+},{}],"nbFE":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-require("./App.css");
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-// Render each post
-function renderPost(post) {
-  const {
-    data: {
-      title,
-      url,
-      author,
-      id
-    }
-  } = post;
-  const authorUrl = "https://www.reddit.com/u/".concat(author);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "reddit_widget__post",
-    key: id
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "reddit_widget__posted_by"
-  }, "posted by ", /*#__PURE__*/_react.default.createElement("a", {
-    href: authorUrl,
-    className: "reddit_widget__posted_by",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, "u/", author)), /*#__PURE__*/_react.default.createElement("a", {
-    href: url,
-    className: "reddit_widget__title",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, title));
-}
-
-// Filter, since reddit always returns stickied posts up top
-function nonStickiedOnly(post) {
-  return !post.data.stickied;
-}
-function App(_ref) {
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+// interface IProps {
+//     loading: boolean
+//     error: string
+//     data: any
+//     subreddit:string
+// }
+const DummyComponent = _ref => {
   let {
-    domElement
+    loading,
+    error,
+    data,
+    subreddit
   } = _ref;
-  const subreddit = domElement.getAttribute("data-subreddit");
-  const [loading, setLoading] = (0, _react.useState)();
-  const [error, setError] = (0, _react.useState)('');
-  const [data, setData] = (0, _react.useState)([]);
-  (0, _react.useEffect)(() => {
-    // Fetch data from reddit
-    setLoading(true);
-    fetch("https://www.reddit.com/r/".concat(subreddit, ".json")).then(response => response.json()).then(data => {
-      setLoading(false);
-      setData(data.data.children.slice(0, 10));
-    }).catch(e => {
-      console.log(e);
-      setLoading(false);
-      setError('error fetching from reddit');
-    });
-  }, [subreddit]);
+  function renderPost(post) {
+    const {
+      data: {
+        title,
+        url,
+        author,
+        id
+      }
+    } = post;
+    const authorUrl = "https://www.reddit.com/u/".concat(author);
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "reddit_widget__post",
+      key: id
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "reddit_widget__posted_by"
+    }, "posted by ", /*#__PURE__*/_react.default.createElement("a", {
+      href: authorUrl,
+      className: "reddit_widget__posted_by",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }, "u/", author)), /*#__PURE__*/_react.default.createElement("a", {
+      href: url,
+      className: "reddit_widget__title",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }, title));
+  }
+
+  // Filter, since reddit always returns stickied posts up top
+  function nonStickiedOnly(post) {
+    return !post.data.stickied;
+  }
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "reddit_widget__app"
   }, /*#__PURE__*/_react.default.createElement("h1", {
@@ -947,9 +937,124 @@ function App(_ref) {
     rel: "noopener noreferrer",
     target: "_blank"
   }, "ReactPros.com")));
+};
+var _default = exports.default = DummyComponent;
+},{"react":"n8MK"}],"axhp":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+require("./App.css");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+// Import your modal styles
+
+// interface IProps {
+//     children: JSX.Element
+//     modalIsOpen: boolean
+//     setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+// }
+const ModalComp = _ref => {
+  let {
+    children,
+    modalIsOpen,
+    setModalIsOpen
+  } = _ref;
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  return /*#__PURE__*/_react.default.createElement("div", null, modalIsOpen && /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-overlay"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-content"
+  }, children, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: closeModal
+  }, "Close Modal"))));
+};
+var _default = exports.default = ModalComp;
+},{"react":"n8MK","./App.css":"EQHX"}],"lY9v":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+require("./App.css");
+var _DummyComponent = _interopRequireDefault(require("./DummyComponent"));
+var _ModalComp = _interopRequireDefault(require("./ModalComp"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+// Render each post
+// function renderPost(post){
+//   const { data: { title, url, author, id } } = post
+//   const authorUrl = `https://www.reddit.com/u/${author}`
+
+//   return (
+//     <div className="reddit_widget__post" key={id}>
+//       <div className="reddit_widget__posted_by">
+//         posted by <a href={authorUrl} className="reddit_widget__posted_by" target="_blank" rel="noopener noreferrer">u/{author}</a>
+//       </div>
+//       <a href={url} className="reddit_widget__title" target="_blank" rel="noopener noreferrer">{title}</a>
+//     </div>
+//   )
+// }
+
+// // Filter, since reddit always returns stickied posts up top
+// function nonStickiedOnly(post){
+//   return !post.data.stickied
+// }
+
+function App(_ref) {
+  let {
+    domElement
+  } = _ref;
+  const subreddit = domElement.getAttribute("data-subreddit");
+  const [loading, setLoading] = (0, _react.useState)();
+  const [error, setError] = (0, _react.useState)('');
+  const [data, setData] = (0, _react.useState)([]);
+  const [modalIsOpen, setModalIsOpen] = (0, _react.useState)(false);
+  (0, _react.useEffect)(() => {
+    // Fetch data from reddit
+    setLoading(true);
+    fetch("https://www.reddit.com/r/".concat(subreddit, ".json")).then(response => response.json()).then(data => {
+      setLoading(false);
+      setData(data.data.children.slice(0, 10));
+    }).catch(e => {
+      console.log(e);
+      setLoading(false);
+      setError('error fetching from reddit');
+    });
+  }, [subreddit]);
+  if (subreddit === "javascript") {
+    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+      onClick: () => setModalIsOpen(true)
+    }, "Click to pop us checkout"), /*#__PURE__*/_react.default.createElement(_ModalComp.default, {
+      modalIsOpen: modalIsOpen,
+      setModalIsOpen: setModalIsOpen
+    }, /*#__PURE__*/_react.default.createElement(_DummyComponent.default, {
+      data: data,
+      error: error,
+      loading: loading,
+      subreddit: subreddit
+    })));
+  }
+  return /*#__PURE__*/_react.default.createElement(_DummyComponent.default, {
+    data: data,
+    error: error,
+    loading: loading,
+    subreddit: subreddit
+  });
 }
 var _default = exports.default = App;
-},{"react":"n8MK","./App.css":"EQHX"}],"FheM":[function(require,module,exports) {
+},{"react":"n8MK","./App.css":"EQHX","./DummyComponent":"nbFE","./ModalComp":"axhp"}],"FheM":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
