@@ -925,7 +925,7 @@ const DummyComponent = _ref => {
     className: "reddit_widget__app"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "reddit_widget__header"
-  }, "Latest posts in __hell0__ ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "Latest posts in new update ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://reddit.com/r/".concat(subreddit),
     rel: "noopener noreferrer"
   }, "/r/", subreddit)), /*#__PURE__*/_react.default.createElement("div", {
@@ -1033,6 +1033,7 @@ function App(_ref) {
       setError('error fetching from reddit');
     });
   }, [subreddit]);
+  console.log(subreddit);
   if (subreddit === "javascript") {
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
       onClick: () => setModalIsOpen(true)
