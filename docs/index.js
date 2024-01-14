@@ -1033,7 +1033,6 @@ function App(_ref) {
       setError('error fetching from reddit');
     });
   }, [subreddit]);
-  console.log(subreddit);
   if (subreddit === "javascript") {
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
       onClick: () => setModalIsOpen(true),

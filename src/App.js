@@ -46,7 +46,6 @@ function App({ domElement }) {
       });
   }, [subreddit])
 
-  console.log(subreddit)
   if (subreddit === "javascript") {
     return (
       <div>
