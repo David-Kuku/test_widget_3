@@ -1036,8 +1036,14 @@ function App(_ref) {
   console.log(subreddit);
   if (subreddit === "javascript") {
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
-      onClick: () => setModalIsOpen(true)
-    }, "Click to pop us checkout"), /*#__PURE__*/_react.default.createElement(_ModalComp.default, {
+      onClick: () => setModalIsOpen(true),
+      style: {
+        backgroundColor: 'green',
+        color: 'white',
+        padding: '10px 20px',
+        borderRadius: '5px'
+      }
+    }, "Click to pop up checkout"), /*#__PURE__*/_react.default.createElement(_ModalComp.default, {
       modalIsOpen: modalIsOpen,
       setModalIsOpen: setModalIsOpen
     }, /*#__PURE__*/_react.default.createElement(_DummyComponent.default, {
