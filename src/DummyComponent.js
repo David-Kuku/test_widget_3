@@ -30,7 +30,7 @@ const DummyComponent = ({loading, error, data, subreddit}) => {
     return (
         <div className="reddit_widget__app">
             <h1 className="reddit_widget__header">
-                Latest posts in __hell0__ <a href={`https://reddit.com/r/${subreddit}`} rel="noopener noreferrer">/r/{subreddit}</a>
+                Latest posts in new update <a href={`https://reddit.com/r/${subreddit}`} rel="noopener noreferrer">/r/{subreddit}</a>
             </h1>
             <div className="reddit_widget__inner">
                 {loading && "Loading..."}
