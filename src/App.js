@@ -50,7 +50,7 @@ function App({ domElement }) {
   if (subreddit === "javascript") {
     return (
       <div>
-        <button onClick={() => setModalIsOpen(true)}>Click to pop us checkout</button>
+        <button onClick={() => setModalIsOpen(true)} style={{backgroundColor: 'green', color: 'white', padding: '10px 20px', borderRadius: '5px'}}>Click to pop up checkout</button>
 
         <ModalComp modalIsOpen = {modalIsOpen} setModalIsOpen={setModalIsOpen}>
           <DummyComponent data={data} error={error} loading={loading} subreddit={subreddit} />
