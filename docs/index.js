@@ -935,18 +935,18 @@ function App(_ref) {
     className: "reddit_widget__app"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "reddit_widget__header"
-  }, "Latest posts in ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "Latest posts in __hell0__ ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://reddit.com/r/".concat(subreddit),
     rel: "noopener noreferrer"
   }, "/r/", subreddit)), /*#__PURE__*/_react.default.createElement("div", {
     className: "reddit_widget__inner"
   }, loading && "Loading...", error && error, !!data.length && data.filter(nonStickiedOnly).map(renderPost)), /*#__PURE__*/_react.default.createElement("p", {
     className: "reddit_widget__powered_by"
-  }, "This widget is powered by", " ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "This kuku widget is powered by", " ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://javascriptpros.com",
     rel: "noopener noreferrer",
     target: "_blank"
-  }, "JavaScriptPros.com")));
+  }, "ReactPros.com")));
 }
 var _default = exports.default = App;
 },{"react":"n8MK","./App.css":"EQHX"}],"FheM":[function(require,module,exports) {
